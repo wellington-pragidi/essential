@@ -1,0 +1,81 @@
+.modal_popup {
+    display: none;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 8895;
+    background-color: rgba(0,0,0,0.85);
+}
+.modal_popup.mp_scroll {
+    overflow: hidden;
+}
+/*.mp_open { estilize usando uma classe de link ou botao }*/
+.modal_popup .mp_grid {
+    position: relative;
+    margin: 2.5vh auto;
+    padding: 0;
+    animation: mp_show 1s both;
+    z-index: 8888;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #EFF1F3;
+}
+.modal_popup.mp_scroll .mp_grid {
+    margin: 2.5vh auto;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+.modal_popup.mp_center .mp_grid {
+    position: absolute;
+    overflow-y: auto;
+    margin: auto auto;
+    text-align: center;
+    top: 0; left: 0; right: 0; bottom: 0;
+    height: auto;
+    max-height: 80vh;
+}
+.modal_popup.mp_center .mp_grid .mp_footer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    width: 100%;
+}
+
+.modal_popup .mp_content {
+    position: relative;
+    padding: 10px 15px;
+}
+.modal_popup .mp_header, .modal_popup .mp_footer {
+    position: relative;
+    padding: 7px 15px;
+    background-color: #E2E4E6;
+}
+
+.modal_popup .mp_header h1, .modal_popup .mp_footer h1 {
+    display: none !important;
+}
+.modal_popup .mp_header h2, .modal_popup .mp_header h3, .modal_popup .mp_header h4, .modal_popup .mp_header h5, .modal_popup .mp_header h6,
+.modal_popup .mp_footer h2, .modal_popup .mp_footer h3, .modal_popup .mp_footer h4, .modal_popup .mp_footer h5, .modal_popup .mp_footer h6 {
+    margin: 0 0 0 0 !important;
+    padding: 0 0 0 0 !important;
+}
+/*.mp_close { .close in components.css }*/
+.mp_over {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+}
+
+@keyframes mp_show {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="popup.css" />
+<title>Essential</title>
+</head>
+<body>
+
+	<section id="wrp">
+
+		<div id="toolbar_essential">
+			<button class="select">Formato &darr;</button>
+			<ul id="formats">
+				<li><button id="h2">Título 2</button></li>
+				<li><button id="h3">Título 3</button></li>
+				<li><button id="h4">Título 4</button></li>
+				<li><button id="h5">Título 5</button></li>
+				<li><button id="h6">Título 6</button></li>
+			</ul>
+			<span class="separator"></span>
+			<button title="Inserir imagem" id="insertImage" class="mp_open" data-mp="image"></button>
+			<div id="image" class="modal_popup">
+			    <section class="mp_grid" style="width:300px; height:190px;">
+			        <article class="mp_content">
+			            <input type="file" id="set_image" />
+			        </article>
+			        <footer class="mp_footer">
+			        	<div class="btn mp_close">Fechar</div>
+			        </footer>
+			    </section>
+			</div>
+			<span class="separator"></span>
+			<button title="Lista" id="insertUnorderedList"></button>
+			<button title="Lista ordenada" id="insertOrderedList"></button>
+			<span class="separator"></span>
+			<button title="Negrito" id="bold"></button>
+			<button title="Italico" id="italic"></button>
+			<button title="Underline" id="underline"></button>
+			<button title="Riscado" id="strikethrough"></button>
+			<button title="Regua" id="insertHorizontalRule"></button>
+			<!-- <button title="Bloco de citação" id="formatBlock"></button> -->
+			<span class="separator"></span>
+			<button title="Alinhar a esquerda" id="justifyLeft"></button>
+			<button title="Centralizar" id="justifyCenter"></button>
+			<button title="Alinhar a direita" id="justifyRight"></button>
+			<button title="Justificar" id="justifyFull"></button>
+			<span class="separator"></span>
+			<button title="Inserir Link" id="createLink" class="mp_open" data-mp="link"></button>
+			<div id="link" class="modal_popup">
+			    <section class="mp_grid" style="width:270px; height:120px;">
+			        <article class="mp_content">
+			            <input type="url" id="set_link" placeholder="Insira a URL" />
+			        </article>
+			        <footer class="mp_footer">
+			        	<p><button class="btn mp_close" id="insert_link">Inserir</button></p>
+			        	<p><a href="javascript:void(0)" class="mp_close">Cancelar</a></p>
+			        </footer>
+			    </section>
+			</div>
+			<button title="Remover link" id="unlink"></button>
+			<button title="Remover formatação" id="forwardDelete"></button>
+		</div>
+
+		<div id="essential"></div>
+
+		<textarea id="output_essential"></textarea>
+    
+    	<div id="tag_essential"></div>
+	</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
